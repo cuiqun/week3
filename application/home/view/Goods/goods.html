@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap 实例</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>商品id</th>
+            <th>商品名称</th>
+            <th>商品价格</th>
+            <th>商品库存</th>
+            <th>商品图片</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        {volist name="data" id="vo"}
+            <tr>
+                <td>{$vo.goods_id}</td>
+                <td>{$vo.goods_name}</td>
+                <td>{$vo.goods_price}</td>
+                <td>{$vo.goods_stock}</td>
+                <td>{$vo.goods_logo}</td>
+            </tr>
+        {/volist}
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
